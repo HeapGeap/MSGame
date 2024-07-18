@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fitHeight="411.0" fitWidth="740.0" layoutX="-58.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/MenuBack1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="NewGameButton" layoutX="243.0" layoutY="170.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="128.0" text="Новая игра" textFill="#ff3c00" />
+      <Button fx:id="ExitButton" layoutX="260.0" layoutY="263.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" text="Выход" textFill="#ff3c00" />
+   </children>
+</Pane>

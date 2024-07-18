@@ -1,0 +1,59 @@
+@startuml
+class GameStart.NewGameController {
+~ {static} Mines game
+~ {static} int rows
+~ Button b
+~ {static} int mouseClick
+- TextField NumRows
+- TextField NumCols
+- TextField NumM
+~ void StartGame(ActionEvent)
+}
+class MineSet.Mines {
+- int height
++ String[][] board
+- Random rand
+- int h
++ {static} int winLose
++ int getCol()
++ int getRow()
+- void checkPlace(int,int)
+- boolean inBoard(int,int)
++ boolean addMine(int,int)
++ boolean open(int,int)
++ void toggleFlag(int,int)
++ void toggleQM(int,int)
++ boolean isDone()
++ String get(int,int)
++ void setShowAll()
++ String toString()
+}
+class sample.Controller {
+- ResourceBundle resources
+- URL location
+- Button NewGameButton
+- Button ExitButton
+- Scene NewGameScene
+~ void initialize()
+}
+class GameStart.BoardController {
+~ Button b
++ GridPane TheBoard
++ Label winLose
+- Button BackMenu
+- Scene NewGameScene
+~ void initialize()
+~ void ResetBoard(ActionEvent)
+}
+class sample.Main {
++ {static} Stage prim
++ {static} Parent root
++ {static} Scene MainScene
++ {static} URL MainSceneUrl
++ void start(Stage)
++ {static} void main(String[])
+}
+
+
+javafx.application.Application <|-- sample.Main
+@enduml
